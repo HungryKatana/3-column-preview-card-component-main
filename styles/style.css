@@ -1,0 +1,148 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--transparent-white);
+    background-color: var(--very-light-gray);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    width: 87%;
+    padding: 13%;
+}
+
+.card:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+.card:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.card--orange {
+    background-color: var(--bright-orange);
+}
+
+.card--cyan {
+    background-color: var(--dark-cyan);
+}
+
+.card--dark-cyan {
+    background-color: var(--very-dark-cyan);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.card__img {
+    margin-bottom: 1.5rem;
+}
+
+.card__title {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.card__text {
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.card__button {
+    border: none;
+    background-color: var(--very-light-gray);
+    padding: 1em 2em;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card__button:hover,
+.card__button:active {
+    background-color: inherit;
+    color: var(--transparent-white);
+    border: 2px solid #fff;
+    translate: -1px;
+}
+
+.card__button--orange {
+    color: var(--bright-orange);
+}
+
+.card__button--cyan {
+    color: var(--dark-cyan);
+}
+
+.card__button--dark-cyan {
+    color: var(--very-dark-cyan);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 1140px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container {
+        flex-direction: row;
+        min-height: 100vh;
+        width: 70%;
+    }
+
+    .card {
+        padding: 5rem;
+    }
+
+    .card__text {
+        padding-bottom: 5em;
+        width: 80%;
+        line-height: 1.5em;
+    }
+
+    .card__title {
+        font-size: 3em;
+    }
+
+    .card:first-child {
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    .card:last-child {
+        border-radius: 0px 5px 5px 0px;
+    }
+
+}
